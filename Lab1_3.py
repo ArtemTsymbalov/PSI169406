@@ -7,7 +7,7 @@ async def foo2() -> None:
     await asyncio.sleep(3)
     print("Hello world!")
 async def main() -> None:
-    await foo1()
+    asyncio.create_task(foo1())
     await foo2()
 
 
